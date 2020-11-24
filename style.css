@@ -5,12 +5,18 @@ div {
 
 .empty{
 	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+
 }
 
 .child_half{
-	width: 49.5%;
+	width: 49%;
 	height: 300px;
 	display: inline-block;
+	box-sizing: border-box;
 }
 .child_half:hover{
 	border: 1px solid red;
@@ -21,13 +27,21 @@ div {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	/*border: 1px solid grey;*/
+	border: 1px solid grey;
 	width: 100%;
-	/*background-color: rgb(230, 253, 224);*/
+	background-color: rgb(230, 253, 224);
+	margin: 0px;
+	padding: 0px;
+	box-sizing: content-box;
+
+
 }
 canvas {
 	background: transparent;
-	border: 1px solid grey;
+/*	border: 1px solid lightgrey;*/
+	margin: 0px;
+	padding: 0px;
+
 }
 
 * {
@@ -51,5 +65,9 @@ h1 {
 }
 
 p{
+	/*font-family: 'Manrope-VariableFont_wght'  , sans-serif;
+	*/
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 12px;
 	color: darkblue;
 }
