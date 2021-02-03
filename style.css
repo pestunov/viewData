@@ -12,15 +12,8 @@ div {
 
 }
 
-.child_half{
-	width: 49%;
-	height: 300px;
-	display: inline-block;
-	box-sizing: border-box;
-}
-.child_half:hover{
+canvas:hover{
 	border: 1px solid red;
-	
 }
 
 .dcont {
@@ -33,12 +26,11 @@ div {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: content-box;
-
-
 }
+
 canvas {
 	background: transparent;
-/*	border: 1px solid lightgrey;*/
+	border: 1px solid lightgrey;
 	margin: 0px;
 	padding: 0px;
 

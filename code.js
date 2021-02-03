@@ -41,49 +41,4 @@ for (ii in schemaParsed){
 	}
 }
 
-
-
-
-var winWidth = document.documentElement.clientWidth;
-
-var c=document.getElementById("gri1");
-var dw=c.clientWidth; var dh=c.offsetHeight-6;
-var c=document.getElementById("chart11");
-var ctx=c.getContext("2d");
-c.width=dw; c.height=dh;
-console.log(c.width, c.height);
-var chart1=new MyChart(ctx, c.width, c.height);
-
-if (schemaParsed[0]["type"] == "datetime") {
-	chart1.drawGridDate(data[0], data[2], "Datetime", "CO2air");
-}
-
-if (schemaParsed[0]["graph"][0]["type"] == "dot") {
-	chart1.drawChartDot(data[0], data[2], 3, 'lightgreen');	
-}
-else if (schemaParsed[0]["graph"][0]["type"] == "line") {
-	chart1.drawChartLine(data[0], data[2], 1, 'red');	
-}
-
-
-
-//chart1.drawGridDate(DateTimeSec,Data1, "Datetime", "CO2air");
-//chart1.drawChartDot(DateTimeSec, Data1, 3, 'lightgreen');
-
-var c=document.getElementById("gri2");
-var dw=c.clientWidth; var dh=c.offsetHeight-6;
-var c=document.getElementById("chart12");
-var ctx=c.getContext("2d");
-c.width=dw; c.height=dh;
-var chart1 = new MyChart(ctx, c.width, c.height);
-chart1.drawGridDate(data[0], data[3], "DateTime", "Twtr");
-//chart1.drawChartPolygon(DateTimeSec,Data2,Data3, 'rgba(225,10,0,0.2)');
-chart1.drawChartLine(data[0], data[3], 2, 'red');
-chart1.drawChartLine(data[0], data[4], 2, 'green');
-
-//chart3.drawGridDate(DateTimeSec, Data3, "Datetime", "CO2Bot");
-//chart3.drawChartDot(DateTimeSec, Data3, 2, 'magenta');
-
-
-
 var timer_reload = setInterval("obnovit_stranicu()", 1200000);
